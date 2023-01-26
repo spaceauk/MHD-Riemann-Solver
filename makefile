@@ -38,3 +38,5 @@ main: $(OBJ)
 
 clean:
 	rm -f ./*.o ./*.x ./Error_File ./Output_File
+	@echo files cleaned
+	
