@@ -21,7 +21,7 @@
         !$OMP DO COLLAPSE (2)
          do j=2,ny-1
           do i=2,nx-1
-           theta=1. ! Not sure should be 0 or 1
+           theta=1. 
            if (delta(i,j).ne.0) theta=delta(i-1,j)/delta(i,j)           
            eta=(delta(i-1,j)**2+delta(i,j)**2)/((r*dx)**2)
            phiL(i,j)=phifunc(theta,eta,eps)
