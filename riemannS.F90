@@ -88,7 +88,7 @@
          +0.5*(wL(2)**2+wL(3)**2+wL(4)**2)+ &
          +0.5*(wL(5)**2+wL(6)**2+wL(7)**2)/wL(1)
         eL=eL*wL(1)
-        ! Specific enthalpy H defined from google books
+        ! Specific enthalpy H 
         HL=(eL+wL(8)+0.5*(wL(5)**2+wL(6)**2+wL(7)**2))/wL(1)
         qL=[wL(1),wL(1)*wL(2),wL(1)*wL(3),wL(1)*wL(4), &
             wL(5),wL(6),wL(7),eL]
@@ -105,12 +105,12 @@
          +0.5*(wR(2)**2+wR(3)**2+wR(4)**2)+ &
          +0.5*(wR(5)**2+wR(6)**2+wR(7)**2)/wR(1)
         eR=eR*wR(1)
-        ! Specific enthalpy H defined from google books
+        ! Specific enthalpy H 
         HR=(eR+wR(8)+0.5*(wR(5)**2+wR(6)**2+wR(7)**2))/wR(1)
         qR=[wR(1),wR(1)*wR(2),wR(1)*wR(3),wR(1)*wR(4), &
             wR(5),wR(6),wR(7),eR]
  
-        ! Left fluxes (not sure about my energy part due to mod)
+        ! Left fluxes 
         ptL=wL(8)+0.5*(wL(5)**2+wL(6)**2+wL(7)**2)
         FL=[wL(1)*vnL, wL(1)*vnL*wL(2)+ptL*nx-BnL*wL(5), &
            wL(1)*vnL*wL(3)+ptL*ny-BnL*wL(6), &
@@ -173,7 +173,7 @@
          +0.5*(wL(2)**2+wL(3)**2+wL(4)**2)+ &
          +0.5*(wL(5)**2+wL(6)**2+wL(7)**2)/wL(1)
         eL=eL*wL(1)
-        ! Specific enthalpy H defined from google books
+        ! Specific enthalpy H 
         HL=(eL+wL(8)+0.5*(wL(5)**2+wL(6)**2+wL(7)**2))/wL(1)
         qL=[wL(1),wL(1)*wL(2),wL(1)*wL(3),wL(1)*wL(4), &
             wL(5),wL(6),wL(7),eL]
@@ -190,7 +190,7 @@
          +0.5*(wR(2)**2+wR(3)**2+wR(4)**2)+ &
          +0.5*(wR(5)**2+wR(6)**2+wR(7)**2)/wR(1)
         eR=eR*wR(1)
-        ! Specific enthalpy H defined from google books
+        ! Specific enthalpy H 
         HR=(eR+wR(8)+0.5*(wR(5)**2+wR(6)**2+wR(7)**2))/wR(1)
         qR=[wR(1),wR(1)*wR(2),wR(1)*wR(3),wR(1)*wR(4), &
             wR(5),wR(6),wR(7),eR]
@@ -202,7 +202,7 @@
         v=(wL(3)+RT*wR(3))/(1+RT)
         w=(wL(4)+RT*wR(4))/(1+RT)
         Bx=(sqrt(wR(1))*wL(5)+sqrt(wL(1))*wR(5)) &  
-           /(sqrt(wL(1))+sqrt(wR(1)))           ! But I still write it in this general form to include when CT not used.             
+           /(sqrt(wL(1))+sqrt(wR(1)))                    
         By=(sqrt(wR(1))*wL(6)+sqrt(wL(1))*wR(6)) &
            /(sqrt(wL(1))+sqrt(wR(1)))
         Bz=(sqrt(wR(1))*wL(7)+sqrt(wL(1))*wR(7)) &
@@ -219,7 +219,7 @@
         SL=minval([vnL-cfL,lambda(1),0.])
         SR=maxval([vnR+cfR,lambda(7),0.])
 
-        ! Left fluxes (not sure about my energy part due to mod)
+        ! Left fluxes 
         ptL=wL(8)+0.5*(wL(5)**2+wL(6)**2+wL(7)**2)
         FL=[wL(1)*vnL, wL(1)*vnL*wL(2)+ptL*nx-BnL*wL(5), &
            wL(1)*vnL*wL(3)+ptL*ny-BnL*wL(6), &
@@ -290,7 +290,7 @@
          +0.5*(wL(2)**2+wL(3)**2+wL(4)**2)+ &
          +0.5*(wL(5)**2+wL(6)**2+wL(7)**2)/wL(1)
         eL=eL*wL(1)
-        ! Specific enthalpy H defined from google books
+        ! Specific enthalpy H 
         HL=(eL+wL(8)+0.5*(wL(5)**2+wL(6)**2+wL(7)**2))/wL(1)
         qL=[wL(1),wL(1)*wL(2),wL(1)*wL(3),wL(1)*wL(4), &
             wL(5),wL(6),wL(7),eL]
@@ -307,7 +307,7 @@
          +0.5*(wR(2)**2+wR(3)**2+wR(4)**2)+ &
          +0.5*(wR(5)**2+wR(6)**2+wR(7)**2)/wR(1)
         eR=eR*wR(1)
-        ! Specific enthalpy H defined from google books
+        ! Specific enthalpy H 
         HR=(eR+wR(8)+0.5*(wR(5)**2+wR(6)**2+wR(7)**2))/wR(1)
         qR=[wR(1),wR(1)*wR(2),wR(1)*wR(3),wR(1)*wR(4), &
             wR(5),wR(6),wR(7),eR]
@@ -341,7 +341,7 @@
         SR=maxval([vnR+cfR,lambda(7)])
         cf_roe=lambda(7)-vn_roe
 
-        ! Left fluxes (not sure about my energy part due to mod)
+        ! Left fluxes 
         ptL=wL(8)+0.5*(wL(5)**2+wL(6)**2+wL(7)**2)
         FL=[wL(1)*vnL, wL(1)*vnL*wL(2)+ptL*nx-BnL*wL(5), &
            wL(1)*vnL*wL(3)+ptL*ny-BnL*wL(6), &
@@ -449,7 +449,7 @@
          +0.5*(wL(2)**2+wL(3)**2+wL(4)**2)+ &
          +0.5*(wL(5)**2+wL(6)**2+wL(7)**2)/wL(1)
         eL=eL*wL(1)
-        ! Specific enthalpy H defined from google books
+        ! Specific enthalpy H 
         HL=(eL+wL(8)+0.5*(wL(5)**2+wL(6)**2+wL(7)**2))/wL(1)
         qL=[wL(1),wL(1)*wL(2),wL(1)*wL(3),wL(1)*wL(4), &
             wL(5),wL(6),wL(7),eL]
@@ -466,7 +466,7 @@
          +0.5*(wR(2)**2+wR(3)**2+wR(4)**2)+ &
          +0.5*(wR(5)**2+wR(6)**2+wR(7)**2)/wR(1)
         eR=eR*wR(1)
-        ! Specific enthalpy H defined from google books
+        ! Specific enthalpy H 
         HR=(eR+wR(8)+0.5*(wR(5)**2+wR(6)**2+wR(7)**2))/wR(1)
         qR=[wR(1),wR(1)*wR(2),wR(1)*wR(3),wR(1)*wR(4), &
             wR(5),wR(6),wR(7),eR]
@@ -505,7 +505,7 @@
         if (abs(SL).le.2.2204E-16) SL=0
         if (abs(SR).le.2.2204E-16) SR=0
 
-        ! Left fluxes (not sure about my energy part due to mod)
+        ! Left fluxes 
         ptL=wL(8)+0.5*(wL(5)**2+wL(6)**2+wL(7)**2)
         FL=[wL(1)*vnL, wL(1)*vnL*wL(2)+ptL*nx-BnL*wL(5), &
            wL(1)*vnL*wL(3)+ptL*ny-BnL*wL(6), &
@@ -638,7 +638,7 @@
           +0.5*(wL(2)**2+wL(3)**2+wL(4)**2)+ &
           +0.5*(wL(5)**2+wL(6)**2+wL(7)**2)/wL(1)
         eL=eL*wL(1)
-        ! Specific enthalpy H defined from Athena:
+        ! Specific enthalpy H 
         HL=(eL+wL(8)+0.5*(wL(5)**2+wL(6)**2+wL(7)**2))/wL(1)
         qL=[wL(1),wL(1)*wL(2),wL(1)*wL(3),wL(1)*wL(4), &
             wL(5),wL(6),wL(7),eL]
@@ -657,15 +657,14 @@
          +0.5*(wR(2)**2+wR(3)**2+wR(4)**2)+ &
          +0.5*(wR(5)**2+wR(6)**2+wR(7)**2)/wR(1)
         eR=eR*wR(1)
-        ! Specific enthalpy H defined from google books
+        ! Specific enthalpy H 
         HR=(eR+wR(8)+0.5*(wR(5)**2+wR(6)**2+wR(7)**2))/wR(1)
         qR=[wR(1),wR(1)*wR(2),wR(1)*wR(3),wR(1)*wR(4), &
             wR(5),wR(6),wR(7),eR]
         ! Other required right variables
         ptR=wR(8)+0.5*(wR(5)**2+wR(6)**2+wR(7)**2)
 
-        ! Obtain waves speed - note that the SL & SR below are given by
-        ! the original Miyoshi paper but it seems to be not very good
+        ! Obtain waves speed 
         SL=minval([vnL,vnR])-maxval([cfL,cfR])
         SR=maxval([vnL,vnR])+maxval([cfL,cfR])
         SM=((SR-vnR)*wR(1)*vnR-(SL-vnL)*wL(1)*vnL-ptR+ptL)/ &
@@ -904,7 +903,7 @@
         SL=minval([vnL-cfL,lambda(1),0.])
         SR=maxval([vnR+cfR,lambda(7),0.])
 
-        ! Left fluxes (not sure about my energy part due to mod)
+        ! Left fluxes 
         ptL=wL(8)+0.5*(wL(5)**2+wL(6)**2+wL(7)**2)
         FL=[wL(1)*vnL, wL(1)*vnL*wL(2)+ptL*nx-BnL*wL(5), &
            wL(1)*vnL*wL(3)+ptL*ny-BnL*wL(6), &
