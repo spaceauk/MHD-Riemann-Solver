@@ -4,7 +4,7 @@ Simulate the behaviour of compressible fluid in the presence or absence of magne
 2) Constrained transport method to ensure solenoidal magnetic field
 3) Compact third-order slope limiter
 4) OpenMP implementation for parallel programming
-5) Iteration by column-major order
+5) Iteration by column-major order for better cache utilization and improved performance
 
 Types of problem to solve:
 1) Shock Tube
