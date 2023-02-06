@@ -11,5 +11,5 @@ Types of problem to solve:
 2) Rotor problem
 3) Blast wave
 
-Example of MHD rotor simulation: 
+Example of MHD rotor simulation: <br />
 https://www.youtube.com/watch?v=Ac8E4WVf0NM&ab_channel=Spaceduck496
