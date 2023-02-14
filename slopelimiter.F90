@@ -65,25 +65,6 @@
           end do
          end do
         !$OMP END DO
-
-! Koren limiter (3rd order)
-        else if (limiter.eq.'Koren') then
-        !$OMP DO COLLAPSE (3)
-        do m=1,nv
-         do j=2,ny-1
-          do i=2,nx-1
-           dww=(w(i,j,m)-w(i-1,j,m))
-           dwe=(w(i+1,j,m)-w(i,j,m))
-           dwc=dww/(dwe+eps) ! Avoid dividing by zero
-           dwdx(i,j,m)=max(0.,min(2*dwc,min((1+2*dwc)/3.,2.)))
-           dws=(w(i,j,m)-w(i,j-1,m))
-           dwn=(w(i,j+1,m)-w(i,j,m)) 
-           dwc=dws/(dwn+eps)
-           dwdy(i,j,m)=max(0.,min(2*dwc,min((1+2*dwc)/3.,2.))) 
-          end do
-         end do
-        end do        
-        !$OMP END DO
  
 ! Positive scheme (K. Waagan):
         else if (limiter.eq.'p-scheme') then
